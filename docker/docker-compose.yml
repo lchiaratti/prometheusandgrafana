@@ -1,0 +1,21 @@
+version: '3'
+volumes:
+  grafana-storage:
+  prometheus:
+services:
+  prometheus:
+    image: prom/prometheus
+    command: ["--config.file=/prometheus-data/prometheus.yml"]
+    volumes:
+      - ./prometheus-data:/prometheus-data
+      - prometheus:/prometheus
+    ports:
+      - 9090:9090
+  grafana:
+    image: grafana/grafana
+    volumes:
+      - grafana-storage:/var/lib/grafana
+    ports:
+      - 3000:3000
+    depends_on:
+      - prometheus
