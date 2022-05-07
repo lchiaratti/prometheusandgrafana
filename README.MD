@@ -1,15 +1,18 @@
 
 ## Monitorando Aplicação com Prometheus & Grafana
 
-## APP
 
-* Comandos iniciar aplicação
 
-npm start
-node indes.js
+## APP NodeJs
+
+Comandos iniciar aplicação em NodeJs
+
+* npm start
+* node indes.js
 
 ## Prometheus - Docker
-docker run
+* Iniciar container Docker com o Prometheus
+* docker run
   -- name prometheusandgrafan
   -- rm
   -d
@@ -17,12 +20,15 @@ docker run
   -v /home/prometheus.yml:/etc/prometheus/prometheus.yml
   prom/prometheus
 
-docker run --name prometheus --rm -d -p 9090:9090 -v /home/prometheus.yml:/etc/prometheus/prometheus.yml prom/prometheus
+* docker run --name prometheus --rm -d -p 9090:9090 -v /home/prometheus.yml:/etc/prometheus/prometheus.yml prom/prometheus
 
 ## Grafana - Docker
 
-docker run -d --name=grafana -p 3000:3000 grafana/grafana
+* Iniciar container Docker com o Grafana
+* docker run -d --name=grafana -p 3000:3000 grafana/grafana
 
 ## Docker Compose
 
-docker-compose up
+* Iniciar container Docker com o Prometheus e Grafana através do arquivo docker-compose.yml
+
+* docker-compose up
