@@ -8,7 +8,7 @@
 Comandos iniciar aplicação em NodeJs
 
 * npm start
-* node indes.js
+* node index.js
 
 ## Prometheus - Docker
 * Iniciar container Docker com o Prometheus
